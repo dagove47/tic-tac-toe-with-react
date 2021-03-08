@@ -1,13 +1,135 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-/* 
+body{
+    height: 125vh;
+    width: 100vw;
+    background: url("https://images.unsplash.com/photo-1558481795-7f0a7c906f5e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1973&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 14px "Century Gothic", Futura, sans-serif;
+}
+.main-title{
+    font-size: 6em;
+    text-align: center;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+}
 
-    You can write your own styles here...
+.main{
+    background-color: rgba(0, 0,0, 0.6);
+    width: 30%;
+    height: 15%;
+    margin: 3em auto;
+    text-align: center;
     
+}
+.buttons{
+    margin-top: 2%;
     
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+    a{
+        background-color: #fff;
+        margin-right: 2%;
+        border-radius: 50px;
+        padding: 30px;
+        border: solid 2px black;
+    }
+}
+.btnX{
+    background-color: rgba(0, 0,0, 0.6);
+    font-weight: bold;
+    color: #fff;
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 2em;
+}
+.parent{
+    width: 50%;
+    margin: 10% auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    .child{
+        line-height: -20px;
+        text-align: center;
+        font-size: 2.5em;
+        height: 150px;
+        width: 33%;
+        border: solid 3px white;
+    }
 
-*/
+}
+ol, ul {
+  padding-left: 30px;
+}
+.game-board{
+    width: 30%;
+    margin: auto;
+    background-color: rgba(0, 0,0, 0.6);
+}
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #999;
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 150px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 150px;
+  color: #fff;
+  animation: glow2 1s ease-in-out infinite alternate;
+}
+.square:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.square:first-child, .square:nth-child(3), .square:nth-child(2){
+    border-top: none;
+}
+.square:first-child, .square:nth-child(4), .square:nth-child(7){
+    border-left: none;
+}
+.square:nth-child(3), .square:nth-child(6), .square:nth-child(9){
+    border-right: none;
+}
+.square:nth-child(7), .square:nth-child(8), .square:nth-child(9){
+    border-bottom: none;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #0073e6, 0 0 50px #0073e6, 0 0 60px #0073e6, 0 0 70px #0073e6;
+  }
+}
+@keyframes glow2 {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #6bf800, 0 0 20px #6bf800, 0 0 25px #6bf800, 0 0 30px #6bf800, 0 0 35px #6bf800;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #6bf800, 0 0 40px #6bf800, 0 0 50px #6bf800, 0 0 60px #6bf800, 0 0 70px #6bf800;
+  }
+}
